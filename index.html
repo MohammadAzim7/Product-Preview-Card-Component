@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  <!--Monrserrat and Fraunces fonts links-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Fraunces?query=Fraunces">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!--Tailwind css basic configuration-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={
+      theme:{
+        extend:{
+        fontFamily: {
+          sans: ['Montserrat','sans-serif'],
+          serif: ['Fraunces','serif'],
+          mono: ['ui-monospace', 'SFMono-Regular'],
+        },
+        colors:{
+          /*Primary*/
+          Cream: "hsl(30, 38%, 92%)",
+          DarkCyan: "hsl(158, 36%, 37%)",
+          /*Neutral*/
+          White: "hsl(0, 0%, 100%) ",
+          VeryDarkBlue: "hsl(212, 21%, 14%)" ,
+          DarkGrayishBlue: "hsl(228, 12%, 48%)",
+        }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Main container-->
+  <div class="flex items-center justify-center bg-Cream">
+
+    <!--mian flex card-->
+    <div class="flex flex-col max-w-full md:max-w-xl md:flex-row my-8 md:my-16 mx-2">
+
+      <!--Images-->
+      
+      <!--Image for mobile screens-->
+      <img src="images/image-product-mobile.jpg" class="object-fit md:hidden rounded-t-lg" alt="image product for mobile screens">
+      <!--Image for desktop screens-->
+      <img src="images/image-product-desktop.jpg" class="object-fit md:w-72 md:inline hidden rounded-l-lg" alt="image product for desktop screens">
+
+
+      <!--content-->
+      <div class=" bg-white flex flex-col sm:items-center md:items-stretch space-y-2 md:space-y-5 p-5 md:p-8 rounded-b-lg md:rounded-r-lg md:rounded-l-none">
+
+        <!--Product type -->
+        <p class="text-DarkGrayishBlue tracking-[0.4em] font-sans">PREFUME</p>
+
+        <!--product name-->
+        <div class="text-3xl text-VeryDarkBlue font-serif ">Gabrielle Essence Eau De Parfum</div>
+
+        <!--product description-->
+        <p class="text-DarkGrayishBlue max-w-lg">A floral, solar and voluptuous 
+          interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+
+        <!-- price  section-->
+        <div class="flex space-x-6 py-4">
+
+          <!--Original price-->
+          <div class="text-3xl text-DarkCyan font-serif">$149.99</div>
+
+          <!--Discount price-->
+          <p class="text-DarkGrayishBlue line-through flex items-center">$169.99</p>
+        </div>
+
+        <!--link to add cart-->
+        <a class="p-3 group space-x-2 hover:bg-emerald-950 transition duration-1000 flex items-center justify-center rounded-lg bg-DarkCyan">
+          <!--svg image-->
+          <img src="images/icon-cart.svg" alt="">
+          <!--Text-->
+          <div class="text-white">Add to Cart</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <!--source-->
+    <div class="text-center font-mono text-gray-600 mb-3 bg-Cream">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="text-blue-600" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#"class="text-blue-600">Mohammad Azim</a>.
+    </div>
+</body>
+</html>
